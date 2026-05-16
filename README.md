@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuickPrint
 
-## Getting Started
+A lightweight web platform that lets print shop customers send documents directly to a shop's dashboard by scanning a QR code — no app, no login, no WhatsApp.
 
-First, run the development server:
+## The Problem
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Customers who want to print documents at local shops currently send files via WhatsApp or email. This means saving the shop owner's contact, cluttering personal chats, and wasting time on both sides.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The Solution
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+QuickPrint gives every print shop a unique QR code. Customers scan it, upload their file with print preferences, and it appears instantly on the shop owner's dashboard. The whole flow takes under 30 seconds.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How It Works
 
-## Learn More
+**For shop owners**
+- Create an account and get a unique QR code
+- Place the QR code at the counter
+- Incoming files appear on the dashboard in real time with all print instructions attached
+- Download the file and print
 
-To learn more about Next.js, take a look at the following resources:
+**For customers**
+- Scan the QR code with any phone camera
+- Select a file (PDF, JPG, PNG, DOCX)
+- Choose color mode, sides, and number of copies
+- Tap send — done
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+No app download. No account. No contact saving.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Features
 
-## Deploy on Vercel
+- **QR-first flow** — one scan is all it takes
+- **Print preferences** — B&W or color, single or double sided, number of copies
+- **Auto-deletion** — every file is permanently deleted 10 minutes after upload
+- **No customer login** — zero friction for the person sending the file
+- **Real-time dashboard** — files appear instantly for the shop owner
+- **Per-shop limits** — 20 active files per shop, 3 uploads per IP
+- **Downloadable QR PDF** — branded sheet with instructions, ready to print and stick at the counter
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Privacy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Files are stored temporarily and deleted automatically after 10 minutes — from both storage and the database. No file is ever retained beyond the print window. No data is sold. No ads.
+
+## Built For
+
+Local print shops, xerox centers, college print counters, and co-working spaces across India where WhatsApp-based file sharing is the current norm.

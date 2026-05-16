@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export default function HomePage() {
   return (
-    <main className={`${playfair.variable} ${dmSans.variable} font-[var(--font-body)] min-h-screen bg-[#fafbff] overflow-x-hidden`}>
+    <main className={`${playfair.variable} ${dmSans.variable} font-(--font-body) min-h-screen bg-[#fafbff] overflow-x-hidden`}>
 
       <style>{`
         @keyframes drift1 {
@@ -67,7 +67,7 @@ export default function HomePage() {
       <nav className="w-full py-5 relative z-20">
         <div className="max-w-[78%] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2.5 animate-fade-in">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl w-9 h-9 flex items-center justify-center font-bold text-sm shadow-md shadow-blue-200">
+            <div className="bg-linear-to-br from-blue-600 to-blue-700 text-white rounded-xl w-9 h-9 flex items-center justify-center font-bold text-sm shadow-md shadow-blue-200">
               Q
             </div>
             <span className="font-bold text-gray-900 text-base tracking-tight">QuickPrint</span>
@@ -76,7 +76,7 @@ export default function HomePage() {
             <Link href="/login" className="text-sm text-gray-500 hover:text-gray-800 font-medium transition px-3 py-2">
               Sign in
             </Link>
-            <Link href="/signup" className="text-sm bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-300 transition shadow-sm shadow-blue-200">
+            <Link href="/signup" className="text-sm bg-linear-to-r from-blue-600 to-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-300 transition shadow-sm shadow-blue-200">
               Get started
             </Link>
           </div>
@@ -94,10 +94,10 @@ export default function HomePage() {
           No app · No login · Files auto-delete in 10 min
         </div>
 
-        <h1 className="font-[var(--font-display)] text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6 animate-slide-up"
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6 animate-slide-up"
           style={{ animationDelay: '0.2s' }}>
           Send files to your<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500 relative">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-500 relative">
             print shop
             <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
               <path d="M2 9 Q75 2 150 8 Q225 14 298 7" stroke="url(#grad1)" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.6" />
@@ -120,7 +120,7 @@ export default function HomePage() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-slide-up"
           style={{ animationDelay: '0.4s' }}>
-          <Link href="/signup" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white px-9 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-300 transition text-sm shadow-lg shadow-blue-200 transform hover:scale-105">
+          <Link href="/signup" className="w-full sm:w-auto bg-linear-to-r from-blue-600 to-blue-700 text-white px-9 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-300 transition text-sm shadow-lg shadow-blue-200 transform hover:scale-105">
             Register your shop — it's free →
           </Link>
           <Link href="/login" className="w-full sm:w-auto bg-white/80 backdrop-blur text-gray-700 px-8 py-3.5 rounded-xl font-semibold hover:bg-white transition text-sm border border-gray-200 shadow-sm hover:shadow-md transform hover:scale-105">
@@ -135,7 +135,7 @@ export default function HomePage() {
           <p className="text-xs font-bold text-blue-600 uppercase tracking-widest text-center mb-3 animate-fade-in">
             How it works
           </p>
-          <h2 className="font-[var(--font-display)] text-3xl md:text-4xl font-bold text-gray-900 text-center mb-14 animate-slide-up">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-14 animate-slide-up">
             Three steps. Zero friction.
           </h2>
 
@@ -197,14 +197,14 @@ export default function HomePage() {
       {/* ── Privacy strip ── */}
       <section className="py-16 relative z-10">
         <div className="max-w-[78%] mx-auto">
-          <div className="relative bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 rounded-3xl p-10 md:p-14 text-center text-white overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+          <div className="relative bg-linear-to-br from-blue-600 via-blue-500 to-blue-700 rounded-3xl p-10 md:p-14 text-center text-white overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
             {/* Inner orb decoration */}
             <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-500 opacity-40 group-hover:opacity-60 transition-opacity" />
             <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-blue-700 opacity-50 group-hover:opacity-70 transition-opacity" />
 
             <div className="relative z-10">
               <div className="text-5xl mb-5 animate-float">🔒</div>
-              <h2 className="font-[var(--font-display)] text-2xl md:text-3xl font-bold mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
                 Privacy by design
               </h2>
               <p className="text-blue-100 max-w-lg mx-auto text-sm leading-relaxed">
@@ -218,11 +218,11 @@ export default function HomePage() {
 
       {/* ── CTA ── */}
       <section className="text-center pb-24 px-8 relative z-10">
-        <h2 className="font-[var(--font-display)] text-3xl font-bold text-gray-900 mb-3 animate-slide-up">
+        <h2 className="text-3xl font-bold text-gray-900 mb-3 animate-slide-up">
           Ready to set up your shop?
         </h2>
         <p className="text-gray-400 text-sm mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>Free forever for hobby use. No credit card needed.</p>
-        <Link href="/signup" className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-300 transition text-sm shadow-lg shadow-blue-200 transform hover:scale-105 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+        <Link href="/signup" className="inline-block bg-linear-to-r from-blue-600 to-blue-700 text-white px-10 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-300 transition text-sm shadow-lg shadow-blue-200 transform hover:scale-105 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           Create your free shop →
         </Link>
       </section>
@@ -232,7 +232,7 @@ export default function HomePage() {
         <div className="max-w-[78%] mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-lg w-6 h-6 flex items-center justify-center font-bold text-xs">Q</div>
+              <div className="bg-linear-to-br from-blue-600 to-blue-700 text-white rounded-lg w-6 h-6 flex items-center justify-center font-bold text-xs">Q</div>
               <span className="text-sm font-semibold text-gray-700">QuickPrint</span>
             </div>
             <div className="flex items-center gap-8">
