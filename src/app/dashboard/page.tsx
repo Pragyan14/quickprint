@@ -64,16 +64,25 @@ export default function DashboardPage() {
     router.push('/login')
   }
 
-  async function handleDownloadFile(storagePath: string, fileName: string) {
-    const { data } = await supabase.storage
-      .from('quick-print').createSignedUrl(storagePath, 60)
-    if (data?.signedUrl) {
-      const link = document.createElement('a')
-      link.href = data.signedUrl
-      link.download = fileName
-      link.click()
-    }
+  async function handleDownloadFile(storagePath: string, fileName: string, fileId: string) {
+  const response = await fetch('/api/file-url', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ storagePath, fileId }),
+  })
+
+  const result = await response.json()
+
+  if (!response.ok) {
+    alert('Could not download file.')
+    return
   }
+
+  const link = document.createElement('a')
+  link.href = result.signedUrl
+  link.download = fileName
+  link.click()
+}
 
   if (loading) {
     return (
@@ -211,7 +220,7 @@ export default function DashboardPage() {
             <div>
               {files.map((file, i) => (
                 <div key={file.id} className={i !== 0 ? 'border-t border-gray-50' : ''}>
-                  <FileCard file={file} onDownload={handleDownloadFile} />
+                  <FileCard file={file} onDownload={(path, name) => handleDownloadFile(path, name, file.id)} />
                 </div>
               ))}
             </div>

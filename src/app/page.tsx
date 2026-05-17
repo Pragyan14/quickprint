@@ -264,7 +264,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-100 pt-6 text-center">
-            <p className="text-xs text-gray-400">Made with <span className="text-red-500">❤️</span> by <a href="https://pragyan.dev" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-600 hover:text-blue-600 transition">Pragyan</a></p>
+            <p className="text-xs text-gray-400">Made with <span className="text-red-500">❤️</span> by <a href="#" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-600 hover:text-blue-600 transition">Pragyan</a></p>
             <p className="text-xs text-gray-400 mt-2">© {new Date().getFullYear()} QuickPrint. Made for India 🇮🇳</p>
           </div>
         </div>
