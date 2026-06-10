@@ -1,7 +1,15 @@
+'use client'
+
 import Link from 'next/link'
-import { Logo } from '../ui/Logo'
+import { usePathname } from 'next/navigation'
+import { Logo } from '@/components/ui/Logo'
 
 export function Navbar() {
+  const pathname = usePathname()
+
+  // Dashboard has its own header — don't render global navbar there
+  if (pathname?.startsWith('/dashboard')) return null
+
   return (
     <header
       className="glass fixed top-0 left-0 right-0 z-50 h-16"
@@ -19,7 +27,7 @@ export function Navbar() {
               href="/login"
               className="text-sm font-medium text-gray-600 px-4 py-2 rounded-lg hover:text-gray-900 transition-colors"
             >
-              Login
+              Log in
             </Link>
             <Link
               href="/signup"

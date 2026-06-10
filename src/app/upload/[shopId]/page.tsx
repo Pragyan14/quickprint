@@ -153,7 +153,7 @@ export default function UploadPage() {
 
   if (notFound) {
     return (
-      <div className="min-h-screen bg-[#f7f8fa] flex items-center justify-center p-4">
+      <div className="min-h-screen relative z-10 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 max-w-sm w-full text-center">
           <div className="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mx-auto mb-4 text-2xl">
             🔍
@@ -169,7 +169,7 @@ export default function UploadPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-[#f7f8fa] flex items-center justify-center p-4">
+      <div className="min-h-screen relative z-10 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 max-w-sm w-full text-center">
           <div className="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-4 text-2xl">
             ✓
@@ -194,7 +194,7 @@ export default function UploadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f8fa] flex items-center justify-center p-4">
+    <div className="min-h-screen relative z-10 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 max-w-sm w-full">
 
         {/* Header */}

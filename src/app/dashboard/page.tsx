@@ -6,6 +6,7 @@ import { createClient } from '@/lib/supabase/client'
 import QRCode from 'qrcode'
 import FileCard from '@/components/ui/FileCard'
 import QRPanel from '@/components/ui/QRPanel'
+import { Logo } from '@/components/ui/Logo'
 
 type Shop = { id: string; name: string }
 type FileRecord = {
@@ -107,7 +108,7 @@ export default function DashboardPage() {
   const pctFull = Math.round((activeCount / 20) * 100)
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen relative z-10">
       {showQR && (
         <QRPanel
           qrUrl={qrUrl}
@@ -119,11 +120,9 @@ export default function DashboardPage() {
 
       {/* Header */}
       <div className="bg-white border-b border-gray-100 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-blue-600 text-white rounded-xl w-9 h-9 flex items-center justify-center font-bold text-sm shrink-0 shadow-sm shadow-blue-200">
-              Q
-            </div>
+            <Logo size={32} />
             <div>
               <h1 className="text-sm font-bold text-gray-900 leading-tight">{shop.name}</h1>
               <p className="text-[11px] text-gray-400">QuickPrint Dashboard</p>
@@ -152,7 +151,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 py-8 space-y-6">
+      <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
 
         {/* Stats row */}
         <div className="grid grid-cols-3 gap-4">
@@ -227,7 +226,7 @@ export default function DashboardPage() {
           )}
         </div>
 
-        <p className="text-center text-xs text-gray-300">
+        <p className="text-center text-xs text-gray-400">
           Files are automatically deleted 10 minutes after upload · Realtime updates coming soon
         </p>
       </div>

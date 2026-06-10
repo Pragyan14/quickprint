@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'QuickPrint — Send files to your print shop instantly',
+  title: 'QuickPrint | Send files to your print shop instantly',
   description: 'Scan a QR code, upload your document, done. No app, no login. Files auto-delete in 10 minutes.',
   keywords: 'print shop, document upload, QR code printing, xerox, quick print India',
   openGraph: {
