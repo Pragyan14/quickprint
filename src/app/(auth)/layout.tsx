@@ -1,18 +1,34 @@
+import Link from 'next/link'
+import { Logo } from '@/components/ui/Logo'
+
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#f7f8fa] flex items-center justify-center p-4">
-      <div className="w-full max-w-sm">
-        {/* Brand mark */}
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-sm relative z-10">
+
+        {/* Brand */}
         <div className="text-center mb-8">
-          <span className="inline-flex items-center gap-2 text-gray-900 font-semibold text-lg">
-            <span className="bg-blue-600 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">Q</span>
-            QuickPrint
-          </span>
+          <Link href="/" className="inline-flex items-center gap-2">
+            <Logo size={34} />
+            <span className="text-lg font-semibold text-[#0c4a6e]">QuickPrint</span>
+          </Link>
         </div>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+
+        {/* Card */}
+        <div
+          className="rounded-2xl p-8"
+          style={{
+            background: 'rgba(255,255,255,0.55)',
+            backdropFilter: 'blur(24px)',
+            WebkitBackdropFilter: 'blur(24px)',
+            border: '1px solid rgba(255,255,255,0.8)',
+            boxShadow: '0 8px 32px rgba(3,105,161,0.08)',
+          }}
+        >
           {children}
         </div>
-        <p className="text-center text-xs text-gray-400 mt-6">
+
+        <p className="text-center text-xs text-gray-400 mt-5">
           Files are deleted automatically. Your privacy is protected.
         </p>
       </div>

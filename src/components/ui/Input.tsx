@@ -13,12 +13,17 @@ export default function Input({ label, hint, error, ...props }: InputProps) {
       </div>
       <input
         {...props}
-        className={`w-full border rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 transition
+        className={`w-full rounded-xl px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 transition
           ${error
-            ? 'border-red-300 focus:ring-red-200'
-            : 'border-gray-200 focus:ring-blue-100 focus:border-blue-400'
+            ? 'border border-red-300 focus:ring-red-200 bg-red-50/40'
+            : 'border border-gray-200 focus:ring-sky-200/60 focus:border-sky-300'
           }
           ${props.className || ''}`}
+        style={{
+          background: error ? undefined : 'rgba(255,255,255,0.65)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+        }}
       />
       {error && <p className="text-xs text-red-500">{error}</p>}
     </div>

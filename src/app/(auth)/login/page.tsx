@@ -86,7 +86,7 @@ export default function LoginPage() {
 
       <p className="text-center text-sm text-gray-400 mt-6">
         New to QuickPrint?{' '}
-        <Link href="/signup" className="text-blue-600 hover:text-blue-700 font-medium">
+        <Link href="/signup" className="text-[#0369a1] hover:text-[#025d8c] font-medium">
           Create a shop
         </Link>
       </p>

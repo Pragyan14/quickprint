@@ -73,15 +73,25 @@ export default function SignupPage() {
   if (success) {
     return (
       <div className="text-center space-y-3">
-        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-600 text-xl">✓</div>
+        <div
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto"
+          style={{ background: 'rgba(5,150,105,0.12)' }}
+        >
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="4 10 8 14 16 6" />
+          </svg>
+        </div>
         <h2 className="text-lg font-semibold text-gray-900">Check your email</h2>
         <p className="text-sm text-gray-500">
-          We sent a verification link to <span className="font-medium text-gray-700">{email}</span>.
+          We sent a verification link to{' '}
+          <span className="font-medium text-gray-700">{email}</span>.
           Click it to activate your account.
         </p>
         <p className="text-xs text-gray-400 pt-2">
           Already verified?{' '}
-          <Link href="/login" className="text-blue-600 hover:underline">Sign in</Link>
+          <Link href="/login" className="text-[#0369a1] hover:underline font-medium">
+            Sign in
+          </Link>
         </p>
       </div>
     )
@@ -129,7 +139,7 @@ export default function SignupPage() {
 
       <p className="text-center text-sm text-gray-400 mt-6">
         Already have an account?{' '}
-        <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium">
+        <Link href="/login" className="text-[#0369a1] hover:text-[#025d8c] font-medium">
           Sign in
         </Link>
       </p>
